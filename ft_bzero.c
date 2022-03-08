@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 12:51:52 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/07 13:15:03 by yoyun            ###   ########.fr       */
+/*   Created: 2022/03/07 14:01:56 by yoyun             #+#    #+#             */
+/*   Updated: 2022/03/08 22:20:50 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	len;
+	unsigned char	*dest;
+	size_t			i;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	i = 0;
+	dest = (unsigned char *)s;
+	while (i < n)
+		dest[i++] = 0;
 }

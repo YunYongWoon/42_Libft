@@ -1,7 +1,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdio.h>
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	main(void)
 {
@@ -37,15 +37,15 @@ int	main(void)
 	result = ft_strlen(str);
 	printf("strlen  => def : %u, result : %u\n", def, result);
 	// memset
-	char	*memset_arr = "memset_str";
+	char	memset_arr[10] = "memset_str";
 	printf("memset test\n");
-	printf("before  => "); 
-	for (int i = 0; i < 10; i++)
+	printf("before  => ");
+	for(int i = 0; i < 10; i++)
 		printf("%c", memset_arr[i]);
 	printf("\n");
-	ft_memset(memset_arr, 'c', sizeof(memset_arr));
+	ft_memset(memset_arr, 'c', 5);
 	printf("after   => ");
-	for (int i = 0; i < 10; i++)
+	for(int i = 0; i < 10; i++)
 		printf("%c", memset_arr[i]);
 	printf("\n");
 	// bzero
@@ -61,14 +61,14 @@ int	main(void)
 		printf("%d", bzero_arr[i]);
 	printf("\n");
 	// memcpy
-	char	memcpy_src[10] = "0123456789";
+	char	*memcpy_src = "0123456789";
 	char	memcpy_dst[10];
 	printf("memcpy test\n");
 	printf("src     => "); 
 	for (int i = 0; i < 10; i++)
 		printf("%c", memcpy_src[i]);
 	printf("\n");
-	ft_memcpy(memcpy_dst, memcpy_src, sizeof(memcpy_src));
+	ft_memcpy(memcpy_dst, memcpy_src, 6);
 	printf("dst     => "); 
 	for (int i = 0; i < 10; i++)
 		printf("%c", memcpy_dst[i]);

@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 14:01:56 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/07 14:49:22 by yoyun            ###   ########.fr       */
+/*   Created: 2022/03/07 13:20:18 by yoyun             #+#    #+#             */
+/*   Updated: 2022/03/08 22:09:18 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*dest;
 	size_t			i;
+	unsigned char	*result;
 
 	i = 0;
-	dest = s;
-	while (i < n)
-		dest[i++] = 0;
+	result = (unsigned char*)b;
+	while (i++ < len)
+		*(result++) = (unsigned char)c;
+	return (b);
 }
