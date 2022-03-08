@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 11:35:49 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/09 01:11:14 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/09 01:23:52 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif

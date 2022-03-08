@@ -6,9 +6,11 @@
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 00:54:27 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/09 01:02:23 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/09 01:18:16 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*strchr(const char *s, int c)
 {

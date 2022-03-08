@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/09 01:07:34 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/09 01:18:09 by yoyun            ###   ########.fr       */
+/*   Created: 2022/03/09 01:16:57 by yoyun             #+#    #+#             */
+/*   Updated: 2022/03/09 01:21:36 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int		i;
-	char	*last_pos;
+	size_t	i;
 
 	i = 0;
-	last_pos = 0;
-	while (1)
+	if (n == 0)
+		return (0);
+	while (s1[i] != 0 && s2[i] != 0 && i < n)
 	{
-		if (s[i] == c)
-			last_pos = (char *)s + i;
-		if (!s[i])
-			break;
+		if (s1[i] != s2[i])
+		{
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		}
 		i++;
 	}
-	if (last_pos)
-		return (last_pos);
-	else
-		return (0);
+	if (i < n)
+	{
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	return (0);
 }

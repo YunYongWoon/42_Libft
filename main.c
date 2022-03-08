@@ -104,5 +104,12 @@ int	main(void)
     char *strrchr_ptr = strrchr(strrchr_str, 'o');
     printf("strrchr test\n");
     printf("찾는 문자 : %c, 찾은 문자열 : %s\n", *strrchr_ptr, strrchr_ptr);
+	//strncmp
+	char *strncmp_s1 = "asdf asdf";
+	char *strncmp_s2 = "asdf bsdf";
+	printf("strncmp test\n");
+	printf("예상결과 : 0 => %d\n", ft_strncmp(strncmp_s1, strncmp_s2, 3));
+	printf("예상결과 : 1 => %d\n", ft_strncmp(strncmp_s2, strncmp_s1, 6));
+	printf("예상결과 : -1 => %d\n", ft_strncmp(strncmp_s1, strncmp_s2, 9));
 	return (0);
 }
