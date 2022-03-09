@@ -92,16 +92,16 @@ int	main(void)
 	printf("tolower : %c\n", ft_tolower('D'));
 	//strchr
 	char *strchr_str = "BlockDMask Blog is good";
-    char *strchr_ptr = strchr(strchr_str, 'o');
+    char *strchr_ptr = ft_strchr(strchr_str, 'o');
     printf("strchr test\n");
     while(strchr_ptr != NULL) 
     {
         printf("찾는 문자 : %c, 찾은 문자열 : %s\n", *strchr_ptr, strchr_ptr);
-        strchr_ptr = strchr(strchr_ptr + 1, 'o');
+        strchr_ptr = ft_strchr(strchr_ptr + 1, 'o');
 	}
 	//strrchr
 	char *strrchr_str = "BlockDMask Blog is good";
-    char *strrchr_ptr = strrchr(strrchr_str, 'o');
+    char *strrchr_ptr = ft_strrchr(strrchr_str, 'o');
     printf("strrchr test\n");
     printf("찾는 문자 : %c, 찾은 문자열 : %s\n", *strrchr_ptr, strrchr_ptr);
 	//strncmp
@@ -111,5 +111,22 @@ int	main(void)
 	printf("예상결과 : 0 => %d\n", ft_strncmp(strncmp_s1, strncmp_s2, 3));
 	printf("예상결과 : 1 => %d\n", ft_strncmp(strncmp_s2, strncmp_s1, 6));
 	printf("예상결과 : -1 => %d\n", ft_strncmp(strncmp_s1, strncmp_s2, 9));
+	//memchr
+	char *memchr_str = "BlockDMask Blog is good";
+    char *memchr_ptr = ft_memchr(memchr_str, 'o', 23);
+    printf("memchr test\n");
+    printf("찾는 문자 : %c, 찾은 문자열 : %s\n", *memchr_ptr, memchr_ptr);
+	//memcmp
+	char *memcmp_s1 = "asdf asdf";
+	char *memcmp_s2 = "asdf csdf";
+	printf("memcmp test\n");
+	printf("예상결과 : 0 => %d, %d\n", memcmp(memcmp_s1, memcmp_s2, 3), ft_memcmp(memcmp_s1, memcmp_s2, 3));
+	printf("예상결과 : 2 => %d, %d\n", memcmp(memcmp_s2, memcmp_s1, 6), ft_memcmp(memcmp_s2, memcmp_s1, 6));
+	printf("예상결과 : -2 => %d, %d\n", memcmp(memcmp_s1, memcmp_s2, 9), ft_memcmp(memcmp_s1, memcmp_s2, 9));
+	//strnstr
+	char *strnstr_str = "BlockDMask Blog is good";
+    char *strnstr_ptr = ft_strnstr(strnstr_str, "Blog", 23);
+    printf("strnstr test\n");
+    printf("찾은 문자열 : %s\n", strnstr_ptr);
 	return (0);
 }

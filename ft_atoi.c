@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/09 00:54:27 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/09 14:58:54 by yoyun            ###   ########.fr       */
+/*   Created: 2022/03/09 15:16:10 by yoyun             #+#    #+#             */
+/*   Updated: 2022/03/09 15:16:55 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_atoi(const char *str)
 {
-	int	i;
-
-	i = 0;
-	while (1)
-	{
-		if (s[i] == (char)c)
-			return ((char *)s + i);
-		if (!s[i])
-			break;
-		i++;
-	}
-	return (0);
+	
 }

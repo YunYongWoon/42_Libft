@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 01:07:34 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/09 01:18:09 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/09 14:55:49 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	last_pos = 0;
 	while (1)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			last_pos = (char *)s + i;
 		if (!s[i])
 			break;
