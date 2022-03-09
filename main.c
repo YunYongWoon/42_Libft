@@ -128,5 +128,10 @@ int	main(void)
     char *strnstr_ptr = ft_strnstr(strnstr_str, "Blog", 23);
     printf("strnstr test\n");
     printf("찾은 문자열 : %s\n", strnstr_ptr);
+	char *atoi_num = "  19221233372036854775807";
+	int atoi_output = atoi(atoi_num);
+	int ft_atoi_output = ft_atoi(atoi_num);
+	printf("atoi    : %d\n", atoi_output);
+	printf("ft_atoi : %d\n", ft_atoi_output);
 	return (0);
 }
