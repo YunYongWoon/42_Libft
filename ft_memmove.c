@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 22:12:55 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/08 22:29:43 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/10 14:02:18 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t				i;
 
 	i = 0;
-	dest = (unsigned char*)dst;
-	srcs = (const unsigned char*)src;
+	dest = (unsigned char *)dst;
+	srcs = (const unsigned char *)src;
 	while (i < len)
 	{
 		if (dest < srcs)

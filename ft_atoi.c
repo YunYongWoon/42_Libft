@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 15:16:10 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 02:41:45 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/10 13:56:33 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,5 @@ int	ft_atoi(const char *str)
 			pm = -1;
 		str++;
 	}
-	return make_output(output, pm, str);
+	return (make_output(output, pm, str));
 }

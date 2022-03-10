@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 11:35:49 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 01:08:16 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/10 14:05:13 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <unistd.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-size_t 	ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *b, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);

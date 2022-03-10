@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 00:54:27 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/09 14:58:54 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/10 14:02:48 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 		if (s[i] == (char)c)
 			return ((char *)s + i);
 		if (!s[i])
-			break;
+			break ;
 		i++;
 	}
 	return (0);
