@@ -133,5 +133,18 @@ int	main(void)
 	int ft_atoi_output = ft_atoi(atoi_num);
 	printf("atoi    : %d\n", atoi_output);
 	printf("ft_atoi : %d\n", ft_atoi_output);
+	//calloc
+	char *point = (char *)calloc(3, sizeof(char));
+    printf("calloc test\n");
+	printf("%c %c %c\n", point[0], point[1], point[2]);
+	point = (char *)ft_memset(point, 65, 3);
+	printf("%c %c %c\n", point[0], point[1], point[2]);
+	free(point);
+	//strdup
+	char *strdup_s1 = "asdf asdf";
+	char *strdup_s2 = ft_strdup(strdup_s1);
+	printf("strdup test\n");
+	printf("%s => %s\n", strdup_s1, strdup_s2);
+	free(strdup_s2);
 	return (0);
 }
