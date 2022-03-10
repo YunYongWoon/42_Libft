@@ -146,5 +146,18 @@ int	main(void)
 	printf("strdup test\n");
 	printf("%s => %s\n", strdup_s1, strdup_s2);
 	free(strdup_s2);
+	//substr
+	char *substr_s1 = "asdf asdf";
+	char *substr_s2 = ft_substr(substr_s1, 1, 6);
+	printf("substr test\n");
+	printf("%s => %s\n", substr_s1, substr_s2);
+	free(substr_s2);
+	//strjoin
+	char *strjoin_s1 = "HELLO, ";
+	char *strjoin_s2 = "World!!";
+	char *strjoin_result = ft_strjoin(strjoin_s1, strjoin_s2);
+	printf("strjoin test\n");
+	printf("%s\n", strjoin_result);
+	free(strjoin_result);
 	return (0);
 }
