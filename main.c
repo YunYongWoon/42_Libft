@@ -179,5 +179,9 @@ int	main(void)
 		idx++;
 	}
 	free(split_result);
+	//itoa
+	int itoa_num = 2483647;
+	char *itoa_arr = ft_itoa(itoa_num);
+	printf("itoa : %d = %s\n", itoa_num, itoa_arr);
 	return (0);
 }
