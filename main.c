@@ -136,9 +136,9 @@ int	main(void)
 	//calloc
 	char *point = (char *)calloc(3, sizeof(char));
     printf("calloc test\n");
-	printf("%c %c %c\n", point[0], point[1], point[2]);
+	printf("%d %d %d\n", point[0], point[1], point[2]);
 	point = (char *)ft_memset(point, 65, 3);
-	printf("%c %c %c\n", point[0], point[1], point[2]);
+	printf("%d %d %d\n", point[0], point[1], point[2]);
 	free(point);
 	//strdup
 	char *strdup_s1 = "asdf asdf";
@@ -159,5 +159,25 @@ int	main(void)
 	printf("strjoin test\n");
 	printf("%s\n", strjoin_result);
 	free(strjoin_result);
+	//strtrim
+	char *strtrim_s1 = "1a2b3c2b1a";
+	char *strtrim_s2 = "1a2";
+	char *strtrim_result = ft_strtrim(strtrim_s1, strtrim_s2);
+	printf("strtrim test\n");
+	printf("%s\n", strtrim_result);
+	free(strtrim_result);
+	//split
+	int idx = 0;
+	char *split_test = "  asdf  asdf  asdffdsa  fdsa  ";
+	char delimiter = ' ';
+	char **split_result = ft_split(split_test, delimiter);
+	printf("split test\n");
+	while (split_result[idx])
+	{
+		printf("%s\n", split_result[idx]);
+		free(split_result[idx]);
+		idx++;
+	}
+	free(split_result);
 	return (0);
 }

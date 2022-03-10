@@ -1,35 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 14:47:01 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 15:47:13 by yoyun            ###   ########.fr       */
+/*   Created: 2022/03/10 14:58:33 by yoyun             #+#    #+#             */
+/*   Updated: 2022/03/10 15:53:48 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	is_set(char c, const char *set)
 {
-	size_t	size;
+	int	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	front;
+	size_t	rear;
 	size_t	i;
 	char	*output;
 
-	size = 0;
-	i = 0;
-	size += ft_strlen(s1) + ft_strlen(s2);
-	if (!size)
+	if (!s1 || !*s1)
 		return (0);
-	output = (char *)malloc(sizeof(char) * size + 1);
+	front = 0;
+	rear = ft_strlen(s1) - 1;
+	while (is_set(s1[front], set) && s1[front])
+		front++;
+	while (is_set(s1[rear], set) && rear > front)
+		rear--;
+	output = (char *)malloc(sizeof(char) * (rear - front + 1));
 	if (!output)
 		return (0);
-	while (*s1)
-		output[i++] = *(s1++);
-	while (*s2)
-		output[i++] = *(s2++);
+	i = 0;
+	while (front <= rear)
+		output[i++] = s1[front++];
 	output[i] = 0;
 	return (output);
 }
