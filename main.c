@@ -49,6 +49,33 @@ int	main(void)
 // 	def = isprint(c);
 // 	result = ft_isprint(c);
 // 	printf("isprint => def : %d, result : %d\n", def, result);
+
+	{
+		printf("---------<Using ft_strlcat>-----------\n\n");
+		char dest[30] = "123";
+		char *src = "456789";
+
+		printf("dest = %s\tsrc = %s\n\n", dest, src);
+		printf("try size 20\n");
+		size_t ret = ft_strlcat(dest, src, 20);
+		printf("dest = %s\treturn = %zu\n\n", dest, ret);
+	}
+	{
+		printf("try size 7\n");
+		char dest[30] = "123";
+		char *src = "456789";
+
+		size_t ret = ft_strlcat(dest, src, 7);
+		printf("dest = %s\treturn = %zu\n\n", dest, ret);
+	}
+	{
+		printf("try size 3\n");
+		char dest[30] = "123";
+		char *src = "456789";
+		size_t ret = ft_strlcat(dest, src, 3);
+		printf("dest = %s\treturn = %zu\n\n", dest, ret);
+		printf("-----------<end of file>-------------");
+	}
 	
 // // strlen
 // 	char	*str;
@@ -225,9 +252,9 @@ int	main(void)
 	
 // //itoa
 // 	printf("itoa test\n");
-// 	int itoa_num = 2483647;
+// 	int itoa_num = 2147483648;
 // 	char *itoa_arr = ft_itoa(itoa_num);
-// 	if (!itoa_arr)
+// 	if (itoa_arr)
 // 	{
 // 		printf("itoa : %d = %s\n", itoa_num, itoa_arr);
 // 		free(itoa_arr);
@@ -244,13 +271,13 @@ int	main(void)
 // 	free(strmapi_result);
 
 
-//striteri
-	printf("striteri test\n");
-	char	*striteri_str = "123abc345";
-	printf("%s => ", striteri_str);
-	void (*ff)(unsigned int, char *) = print;
-	ft_striteri(striteri_str, ff);
-	printf("\n");
+// //striteri
+// 	printf("striteri test\n");
+// 	char	*striteri_str = "123abc345";
+// 	printf("%s => ", striteri_str);
+// 	void (*ff)(unsigned int, char *) = print;
+// 	ft_striteri(striteri_str, ff);
+// 	printf("\n");
 
 	
 // //putchar

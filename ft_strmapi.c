@@ -6,12 +6,11 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 10:30:59 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 12:02:59 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/11 14:25:27 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -32,7 +31,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		idx++;
 	}
 	output[idx] = 0;
-	printf("%s\n", s);
-	printf("%s\n", output);
 	return (output);
 }

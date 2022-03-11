@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:47:01 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 15:47:13 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/11 15:13:51 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size = 0;
 	i = 0;
 	size += ft_strlen(s1) + ft_strlen(s2);
-	if (!size)
-		return (0);
 	output = (char *)malloc(sizeof(char) * size + 1);
 	if (!output)
 		return (0);

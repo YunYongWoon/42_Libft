@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:38:58 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 15:38:38 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/11 15:21:34 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (0);
-	output = (char *)malloc(sizeof(char) * len + 1);
+	if (ft_strlen(s) < start)
+		len = 0;
+	output = (char *)calloc((len + 1), sizeof(char));
 	if (!output)
 		return (0);
 	while (i < len)
@@ -28,6 +30,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		output[i] = s[start + i];
 		i++;
 	}
-	output[i] = 0;
 	return (output);
 }
