@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 16:25:38 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 16:33:24 by yoyun            ###   ########.fr       */
+/*   Created: 2022/03/11 16:40:36 by yoyun             #+#    #+#             */
+/*   Updated: 2022/03/11 20:04:11 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*element;
+	int	size;
 
-	element = (t_list *)malloc(sizeof(t_list));
-	element -> content = content;
-	element -> next = 0;
-	return (element);
+	if (!lst)
+		return (0);
+	size = 1;
+	while (lst -> next != NULL)
+	{
+		lst = lst -> next;
+		size++;
+	}
+	return (size);
 }

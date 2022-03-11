@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 16:46:23 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 16:49:01 by yoyun            ###   ########.fr       */
+/*   Created: 2022/03/11 17:13:53 by yoyun             #+#    #+#             */
+/*   Updated: 2022/03/11 20:04:01 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
-		return (0);
-	while (lst -> next != NULL)
+	while (lst != NULL)
+	{
+		f(lst -> content);
 		lst = lst -> next;
-	return (lst);
+	}
 }

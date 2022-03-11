@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 16:28:18 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 16:51:45 by yoyun            ###   ########.fr       */
+/*   Created: 2022/03/11 16:25:38 by yoyun             #+#    #+#             */
+/*   Updated: 2022/03/11 20:04:08 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstnew(void *content)
 {
-	if (!lst || !new)
-		return ;
-	new -> next = *lst;
-	*lst = new;
+	t_list	*element;
+
+	element = (t_list *)malloc(sizeof(t_list));
+	element -> content = content;
+	element -> next = 0;
+	return (element);
 }
