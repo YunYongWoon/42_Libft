@@ -4,3 +4,4 @@ a.out
 Libftest/
 libft-war-machine/
 *.a
+.vscode/
