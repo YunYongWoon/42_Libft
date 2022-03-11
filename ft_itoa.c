@@ -6,12 +6,11 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:37:03 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 17:21:36 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/11 13:29:05 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	get_size(int n)
 {
@@ -20,7 +19,7 @@ size_t	get_size(int n)
 	output = 0;
 	if (n == 0)
 		return (1);
-	else if(n == -2147483648)
+	else if (n == -2147483648)
 		return (11);
 	else
 	{
@@ -60,11 +59,9 @@ void	make_arr(char *output, int n, size_t size)
 char	*ft_itoa(int n)
 {
 	size_t	arr_max_size;
-	int		input;
 	char	*output;
 
 	arr_max_size = get_size(n);
-	printf("arr_max_size : %lu\n", arr_max_size);
 	output = (char *)calloc((arr_max_size + 1), sizeof(char));
 	if (!output)
 		return (0);

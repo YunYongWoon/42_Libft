@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 14:24:08 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 13:29:31 by yoyun            ###   ########.fr       */
+/*   Created: 2022/03/11 10:48:09 by yoyun             #+#    #+#             */
+/*   Updated: 2022/03/11 10:56:15 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_putnbr(int n, int fd)
 {
-	size_t	size;
-	size_t	i;
-	char	*output;
+	char	nbr;
 
-	size = ft_strlen(s1);
-	i = 0;
-	output = (char *)malloc(sizeof(char) * size + 1);
-	if (!output)
-		return (0);
-	while (i < size)
+	if (n < 10)
 	{
-		output[i] = s1[i];
-		i++;
+		nbr = '0' + n;
+		write(fd, &nbr, 1);
+		return ;
 	}
-	output[i] = 0;
-	return (output);
+	ft_putnbr(n / 10, fd);
+	ft_putnbr(n % 10, fd);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == 0)
+		write(fd, "0", 1);
+	else if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else if (n < 0)
+	{
+		write(fd, "-", 1);
+		ft_putnbr(-n, fd);
+	}
+	else
+		ft_putnbr(n, fd);
 }

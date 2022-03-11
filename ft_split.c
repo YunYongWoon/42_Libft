@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:05:42 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 16:35:33 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/11 13:29:19 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ char	**make_split(char const *s, char c, char **output, size_t substr_count)
 char	**ft_split(char const *s, char c)
 {
 	char	**output;
-	size_t	len;
 	size_t	substr_count;
 
 	substr_count = get_delimiter_count(s, c);
