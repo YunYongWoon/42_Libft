@@ -6,7 +6,7 @@
 #    By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/11 13:11:17 by yoyun             #+#    #+#              #
-#    Updated: 2022/03/11 13:30:10 by yoyun            ###   ########.fr        #
+#    Updated: 2022/03/11 19:35:17 by yoyun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,10 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcpy.c ft_strlcat.c \
 		ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
 		ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
+BONUS =	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBJS = $(SRCS:.c=.o)
+BOBJS = $(BONUS:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -28,14 +31,17 @@ all : $(NAME)
 	$(CC) $(CFLAGS) -c $^ -o $@
 
 $(NAME) : $(OBJS)
-	ar -rcs $@ $^
+	ar rcs $@ $^
+
+bonus : $(BOBJS)
+	ar rcs $(NAME) $^
 
 clean : 
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(BOBJS)
 
 fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all bonus clean fclean re
