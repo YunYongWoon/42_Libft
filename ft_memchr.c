@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:13:34 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 14:29:38 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/12 00:35:24 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t				i;
 	const unsigned char	*cmp;
 	unsigned char		tester;
-
-	if (!s)
-		return (0);
+	
 	i = 0;
 	tester = c;
 	cmp = s;

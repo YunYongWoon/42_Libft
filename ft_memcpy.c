@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 14:12:36 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 16:08:38 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/12 00:28:42 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,17 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t				i;
 	unsigned char		*dest;
-	const unsigned char	*srcs;
+	unsigned char	*srcs;
 
 	i = 0;
-	dest = (unsigned char *)dst;
-	srcs = (const unsigned char *)src;
+	if (!dst && !src)
+		return (0);
+	dest = dst;
+	srcs = (unsigned char *)src;
 	while (i < n)
 	{
 		*(dest++) = *(srcs++);
 		i++;
 	}
-	return ((void *)dst);
+	return (dst);
 }

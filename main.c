@@ -11,11 +11,11 @@
 // 		return '-';
 // }
 
-void print(unsigned int idx, char *c)
-{
-	ft_putchar_fd(*c, 1);
-	idx++;
-}
+// void print(unsigned int idx, char *c)
+// {
+// 	ft_putchar_fd(*c, 1);
+// 	idx++;
+// }
 
 int	main(void)
 {
@@ -49,33 +49,21 @@ int	main(void)
 // 	def = isprint(c);
 // 	result = ft_isprint(c);
 // 	printf("isprint => def : %d, result : %d\n", def, result);
+	// printf("strlcat test\n");
+	// char dest[30] = "rrrr";
+	// char dest2[30] = "rrrr";
+	// char *src = "";
+	// int test = 8;
 
-	{
-		printf("---------<Using ft_strlcat>-----------\n\n");
-		char dest[30] = "123";
-		char *src = "456789";
-
-		printf("dest = %s\tsrc = %s\n\n", dest, src);
-		printf("try size 20\n");
-		size_t ret = ft_strlcat(dest, src, 20);
-		printf("dest = %s\treturn = %zu\n\n", dest, ret);
-	}
-	{
-		printf("try size 7\n");
-		char dest[30] = "123";
-		char *src = "456789";
-
-		size_t ret = ft_strlcat(dest, src, 7);
-		printf("dest = %s\treturn = %zu\n\n", dest, ret);
-	}
-	{
-		printf("try size 3\n");
-		char dest[30] = "123";
-		char *src = "456789";
-		size_t ret = ft_strlcat(dest, src, 3);
-		printf("dest = %s\treturn = %zu\n\n", dest, ret);
-		printf("-----------<end of file>-------------");
-	}
+	// printf("dest = %s\tsrc = %s\n\n", dest, src);
+	// size_t ret = ft_strlcat(dest, src, test);
+	// printf("dest = %s\treturn = %zu\n\n", dest, ret);
+	// printf("try size 7\n");
+	// printf("-----------<end of file>-------------");
+	// printf("dest = %s\tsrc = %s\n\n", dest2, src);
+	// ret = strlcat(dest2, src, test);
+	// printf("dest = %s\treturn = %zu\n\n", dest2, ret);
+	// printf("try size 7\n");
 	
 // // strlen
 // 	char	*str;
@@ -184,17 +172,18 @@ int	main(void)
 	
 // //strnstr
 // 	char *strnstr_str = "BlockDMask Blog is good";
-//     char *strnstr_ptr = ft_strnstr(strnstr_str, "Blog", 23);
+//     char *strnstr_ptr = ft_strnstr(strnstr_str, "BlockDMask Blog is good", 23);
 //     printf("strnstr test\n");
 //     printf("찾은 문자열 : %s\n", strnstr_ptr);
-// 	char *atoi_num = "  19221233372036854775807";
-// 	int atoi_output = atoi(atoi_num);
-// 	int ft_atoi_output = ft_atoi(atoi_num);
-// 	printf("atoi    : %d\n", atoi_output);
-// 	printf("ft_atoi : %d\n", ft_atoi_output);
+
+	// char *atoi_num = "  19221233372036854775807";
+	// int atoi_output = atoi(atoi_num);
+	// int ft_atoi_output = ft_atoi(atoi_num);
+	// printf("atoi    : %d\n", atoi_output);
+	// printf("ft_atoi : %d\n", ft_atoi_output);
 	
 // //calloc
-// 	char *point = (char *)calloc(3, sizeof(char));
+// 	char *point = (char *)ft_calloc(3, sizeof(char));
 //     printf("calloc test\n");
 // 	printf("%d %d %d\n", point[0], point[1], point[2]);
 // 	point = (char *)ft_memset(point, 65, 3);
@@ -226,13 +215,13 @@ int	main(void)
 // 	free(strjoin_result);
 	
 	
-// //strtrim
-// 	char *strtrim_s1 = "1a2b3c2b1a";
-// 	char *strtrim_s2 = "1a2";
-// 	char *strtrim_result = ft_strtrim(strtrim_s1, strtrim_s2);
-// 	printf("strtrim test\n");
-// 	printf("%s\n", strtrim_result);
-// 	free(strtrim_result);
+//strtrim
+	char *strtrim_s1 = "1a2b3c2b1a";
+	char *strtrim_s2 = "1a2";
+	char *strtrim_result = ft_strtrim(strtrim_s1, strtrim_s2);
+	printf("strtrim test\n");
+	printf("%s\n", strtrim_result);
+	free(strtrim_result);
 	
 	
 // //split
@@ -252,12 +241,12 @@ int	main(void)
 	
 // //itoa
 // 	printf("itoa test\n");
-// 	int itoa_num = 2147483648;
-// 	char *itoa_arr = ft_itoa(itoa_num);
-// 	if (itoa_arr)
+// 	int itoa_num = 0;
+// 	char *ft_itoa_arr = ft_itoa(itoa_num);
+// 	if (ft_itoa_arr)
 // 	{
-// 		printf("itoa : %d = %s\n", itoa_num, itoa_arr);
-// 		free(itoa_arr);
+// 		printf("ft_itoa : %s\n", ft_itoa_arr);
+// 		free(ft_itoa_arr);
 // 	}
 	
 	

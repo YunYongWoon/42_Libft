@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:37:03 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 13:29:05 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/13 14:49:11 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ void	make_arr(char *output, int n, size_t size)
 	if (n == -2147483648)
 	{
 		output[size] = '8';
-		make_arr(output, n / 10 * -1, size - 1);
+		make_arr(output, 214748364, size - 1);
 	}
 	else if (n < 0)
-		make_arr(output, n * -1, size);
+		make_arr(output, -n, size);
 	else
 	{
 		output[size] = n % 10 + '0';
@@ -62,7 +62,7 @@ char	*ft_itoa(int n)
 	char	*output;
 
 	arr_max_size = get_size(n);
-	output = (char *)calloc((arr_max_size + 1), sizeof(char));
+	output = (char *)ft_calloc((arr_max_size + 1), sizeof(char));
 	if (!output)
 		return (0);
 	if (n < 0)

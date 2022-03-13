@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:58:33 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 19:40:15 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/13 15:02:22 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	char	*output;
 
-	if (!s1 || !*s1)
+	if (!s1)
 		return (0);
 	front = 0;
 	rear = ft_strlen(s1) - 1;
-	while (is_set(s1[front], set) && s1[front])
+	while (is_set(s1[front], set) && front < rear)
 		front++;
 	while (is_set(s1[rear], set) && rear > front)
 		rear--;
-	output = (char *)malloc(sizeof(char) * (rear - front + 1));
+	if (front == rear)
+		rear--;
+	output = (char *)malloc(sizeof(char) * (rear - front + 2));
 	if (!output)
 		return (0);
 	i = 0;

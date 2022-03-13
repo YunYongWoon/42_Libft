@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 10:30:59 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 14:25:27 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/12 00:46:57 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (0);
 	s_size = ft_strlen(s);
-	output = (char *)calloc((s_size + 1), sizeof(char));
+	output = (char *)ft_calloc((s_size + 1), sizeof(char));
 	if (!output)
 		return (0);
 	idx = 0;

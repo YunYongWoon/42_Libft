@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:33:25 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 14:03:15 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/12 15:44:40 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	is_same(const char *haystack, const char *needle, size_t len)
 			return (0);
 		i++;
 	}
-	if (i == len)
+	if (i == len && needle[i])
 		return (0);
 	return (1);
 }

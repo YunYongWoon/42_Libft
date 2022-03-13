@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:05:42 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 13:29:19 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/12 00:47:48 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 	size_t	substr_count;
 
 	substr_count = get_delimiter_count(s, c);
-	output = (char **)calloc((substr_count + 1), sizeof(char *));
+	output = (char **)ft_calloc((substr_count + 1), sizeof(char *));
 	if (!output)
 		return (0);
 	return (make_split(s, c, output, substr_count));
