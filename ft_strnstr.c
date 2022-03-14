@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:33:25 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/12 15:44:40 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 19:46:46 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_same(const char *haystack, const char *needle, size_t len)
+static int	is_same(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 
