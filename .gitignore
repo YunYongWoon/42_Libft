@@ -6,3 +6,4 @@ libft-war-machine/
 *.a
 .vscode/
 main.c
+*.md

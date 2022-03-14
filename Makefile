@@ -6,7 +6,7 @@
 #    By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/11 13:11:17 by yoyun             #+#    #+#              #
-#    Updated: 2022/03/11 20:18:26 by yoyun            ###   ########.fr        #
+#    Updated: 2022/03/14 13:24:40 by yoyun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	ar rcs $@ $^
 
-bonus : $(BOBJS)
+bonus : $(OBJS) $(BOBJS)
 	ar rcs $(NAME) $^
 
 clean : 
