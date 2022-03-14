@@ -5,3 +5,4 @@ Libftest/
 libft-war-machine/
 *.a
 .vscode/
+main.c

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:37:03 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/13 14:49:11 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 11:17:03 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ size_t	get_size(int n)
 
 void	make_arr(char *output, int n, size_t size)
 {
-	if (size < 0 || output[size])
+	if (output[size] == '-')
 		return ;
 	if (n == -2147483648)
 	{
@@ -51,6 +51,8 @@ void	make_arr(char *output, int n, size_t size)
 	else
 	{
 		output[size] = n % 10 + '0';
+		if (size == 0)
+			return ;
 		make_arr(output, n / 10, size - 1);
 	}
 	return ;

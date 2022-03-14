@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 01:16:57 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 14:03:08 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 12:08:48 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (n == 0)
+	if (n == 0 || s1 == s2)
 		return (0);
 	while (s1[i] != 0 && s2[i] != 0 && i < n)
 	{
