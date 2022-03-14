@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 22:38:39 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/14 13:17:41 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 13:57:12 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	i;
 
-	src_len = 0;
-	dst_len = 0;
 	i = 0;
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);

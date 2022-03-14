@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 00:54:27 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 14:02:48 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 13:57:53 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (1)
 	{
-		if (s[i] == (char)c)
+		if (s[i] == c)
 			return ((char *)s + i);
 		if (!s[i])
 			break ;
