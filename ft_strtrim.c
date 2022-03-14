@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:58:33 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/14 11:02:19 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 13:48:13 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		rear--;
 	if (front == rear)
 		rear--;
-	output = (char *)malloc(sizeof(char) * (rear - front + 2));
+	output = (char *)ft_calloc((rear - front + 2), sizeof(char));
 	if (!output)
 		return (0);
 	i = 0;
 	while (front <= rear)
 		output[i++] = s1[front++];
-	output[i] = 0;
 	return (output);
 }

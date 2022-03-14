@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 01:07:34 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/12 15:23:02 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 13:38:30 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	last_pos = 0;
 	while (1)
 	{
-		if (s[i] == (char)c)
+		if (s[i] == c)
 			last_pos = (char *)s + i;
 		if (!s[i])
 			break ;
