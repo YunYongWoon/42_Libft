@@ -6,7 +6,7 @@
 #    By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/11 13:11:17 by yoyun             #+#    #+#              #
-#    Updated: 2022/03/14 13:24:40 by yoyun            ###   ########.fr        #
+#    Updated: 2022/03/14 19:41:47 by yoyun            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,16 +26,22 @@ BOBJS = $(BONUS:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
+ifdef WITH_BONUS
+	OBJECTS = $(OBJS) $(BOBJS)
+else
+	OBJECTS = $(OBJS)
+endif
+
 all : $(NAME)
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c $^ -o $@
+	$(CC) $(CFLAGS) -I./ -c $^ -o $@
 
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJECTS)
 	ar rcs $@ $^
 
-bonus : $(OBJS) $(BOBJS)
-	ar rcs $(NAME) $^
+bonus : 
+	@make WITH_BONUS=1
 
 clean : 
 	rm -rf $(OBJS) $(BOBJS)
@@ -45,4 +51,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all bonus clean fclean re
+.PHONY : all fclean clean re
