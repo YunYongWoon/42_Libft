@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:58:33 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/13 15:02:22 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/13 15:35:01 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1)
 		return (0);
+	if (!set || !*s1)
+		return (ft_strdup(s1));
 	front = 0;
 	rear = ft_strlen(s1) - 1;
-	while (is_set(s1[front], set) && front < rear)
+	while (is_set(s1[front], set) && front < rear )
 		front++;
 	while (is_set(s1[rear], set) && rear > front)
 		rear--;

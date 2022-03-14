@@ -216,7 +216,7 @@ int	main(void)
 	
 	
 //strtrim
-	char *strtrim_s1 = "1a2b3c2b1a";
+	char *strtrim_s1 = "";
 	char *strtrim_s2 = "1a2";
 	char *strtrim_result = ft_strtrim(strtrim_s1, strtrim_s2);
 	printf("strtrim test\n");
