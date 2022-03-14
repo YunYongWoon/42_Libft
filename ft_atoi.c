@@ -6,20 +6,20 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 15:16:10 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/10 13:56:33 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 19:44:45 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_empty(char c)
+static int	is_empty(char c)
 {
 	if (c == ' ' || (c >= 9 && c <= 13))
 		return (1);
 	return (0);
 }
 
-long long	calc_output(long long output, int pm, const char str)
+static long long	calc_output(long long output, int pm, const char str)
 {
 	if (pm < 0)
 		output = output * 10 - (str - '0');
@@ -28,7 +28,7 @@ long long	calc_output(long long output, int pm, const char str)
 	return (output);
 }
 
-int	check_output(long long output, int pm)
+static int	check_output(long long output, int pm)
 {
 	if ((pm < 0 && output > 0) || output < -922337203685477580)
 		return (-1);
@@ -37,7 +37,7 @@ int	check_output(long long output, int pm)
 	return (0);
 }
 
-long long	make_output(long long output, int pm, const char *str)
+static long long	make_output(long long output, int pm, const char *str)
 {
 	while (*str >= '0' && *str <= '9')
 	{

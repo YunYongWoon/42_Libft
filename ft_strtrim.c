@@ -6,13 +6,13 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:58:33 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/14 13:48:13 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 19:46:03 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_set(char c, const char *set)
+static int	is_set(char c, const char *set)
 {
 	int	i;
 

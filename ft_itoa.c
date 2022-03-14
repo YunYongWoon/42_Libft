@@ -6,13 +6,13 @@
 /*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:37:03 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/14 11:17:03 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 19:44:58 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_size(int n)
+static size_t	get_size(int n)
 {
 	size_t	output;
 
@@ -37,7 +37,7 @@ size_t	get_size(int n)
 	}
 }
 
-void	make_arr(char *output, int n, size_t size)
+static void	make_arr(char *output, int n, size_t size)
 {
 	if (output[size] == '-')
 		return ;

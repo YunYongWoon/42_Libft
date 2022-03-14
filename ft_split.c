@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:05:42 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/12 00:47:48 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 19:45:36 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_delimiter_count(const char *s, char c)
+static size_t	get_delimiter_count(const char *s, char c)
 {
 	size_t	count;
 
@@ -26,7 +26,7 @@ size_t	get_delimiter_count(const char *s, char c)
 	return (count);
 }
 
-void	ft_free_all(char **output, size_t size)
+static void	ft_free_all(char **output, size_t size)
 {
 	size_t	i;
 
@@ -36,7 +36,7 @@ void	ft_free_all(char **output, size_t size)
 	free(output);
 }
 
-char	**make_split(char const *s, char c, char **output, size_t substr_count)
+static char	**make_split(char const *s, char c, char **output, size_t substr_count)
 {
 	size_t	i;
 	size_t	len;

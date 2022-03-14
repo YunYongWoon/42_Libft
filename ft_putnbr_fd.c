@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 10:48:09 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/12 00:47:56 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/14 19:45:17 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n, int fd)
+static void	ft_putnbr(int n, int fd)
 {
 	char	nbr;
 
