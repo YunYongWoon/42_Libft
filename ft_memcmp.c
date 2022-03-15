@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:20:50 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/14 12:07:49 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/15 16:14:00 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t			i;
 
 	i = 0;
+	if (s1 == s2 || !n)
+		return (0);
 	cmp1 = (unsigned char *)s1;
 	cmp2 = (unsigned char *)s2;
 	while (i < n)

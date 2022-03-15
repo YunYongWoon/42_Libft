@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:47:01 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/14 13:46:51 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/15 16:31:23 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*output;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (0);
 	s1_size = ft_strlen(s1);
 	s2_size = ft_strlen(s2);
 	output = (char *)ft_calloc(s1_size + s2_size + 1, sizeof(char));

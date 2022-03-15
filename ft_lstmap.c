@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 17:17:23 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/11 20:32:24 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/15 16:36:01 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	start = NULL;
 	while (lst != NULL)
 	{
+		if (!f)
+			break ;
 		next = ft_lstnew(f(lst -> content));
 		if (!next)
 			ft_lstclear(&start, del);
