@@ -6,7 +6,7 @@
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:05:42 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/15 16:33:09 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/15 17:03:50 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,9 @@ char	**ft_split(char const *s, char c)
 	size_t	substr_count;
 
 	if (!s)
-		return (0);
-	substr_count = get_delimiter_count(s, c);
+		substr_count = 0;
+	else
+		substr_count = get_delimiter_count(s, c);
 	output = (char **)ft_calloc((substr_count + 1), sizeof(char *));
 	if (!output)
 		return (0);

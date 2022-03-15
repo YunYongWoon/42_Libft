@@ -6,11 +6,19 @@
 /*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 14:47:01 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/15 16:31:23 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/15 17:07:45 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	get_len(char const *s)
+{
+	if (!s)
+		return (0);
+	else
+		return (ft_strlen(s));
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -20,10 +28,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*output;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	s1_size = ft_strlen(s1);
-	s2_size = ft_strlen(s2);
+	s1_size = get_len(s1);
+	s2_size = get_len(s2);
 	output = (char *)ft_calloc(s1_size + s2_size + 1, sizeof(char));
 	if (!output)
 		return (0);
