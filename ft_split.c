@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yoyun <yoyun@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: yoyun <yoyun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:05:42 by yoyun             #+#    #+#             */
-/*   Updated: 2022/03/15 17:03:50 by yoyun            ###   ########.fr       */
+/*   Updated: 2022/03/16 13:32:04 by yoyun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ static void	ft_free_all(char **output, size_t size)
 	free(output);
 }
 
-static char	**make_split(char const *s, char c, char **output, size_t substr_count)
+static char	**make_split(char const *s, char c, char **output, size_t count)
 {
 	size_t	i;
 	size_t	len;
 
 	i = 0;
-	while (i < substr_count)
+	while (i < count)
 	{
 		len = 0;
 		while (*s == c && *s)
